@@ -4,9 +4,18 @@
 // Очікуваний результат: [1, 4, 9, 16, 25].
 
 // const numbers = [1, 2, 3, 4, 5];
-// const exp = [];
-// numbers.forEach(num => exp.push(num * num));
-// console.log(exp);
+//     1
+// const doubleNumbers = numbers.map(num => num ** 2);
+// console.log(doubleNumbers);
+//    2
+// const getDoubleNumbers = (arr) => arr.map(el => el ** 2);
+// console.log(getDoubleNumbers(numbers));
+
+//* пошук/фільтрація уніальних елементів
+// console.log([1, 1, 3, 4, 3].filter((el, i, arr) => arr.indexOf(el) === i));  // [1, 3, 4]
+// дано - масив чисел. Видаліть дублікати [1, 2, 2, 3, 4, 4, 5]. Очікуваний результат - [1, 2, 3, 4, 5]:
+// console.log([1, 2, 2, 3, 4, 4, 5].filter((el, i, arr) => arr.indexOf(el) === i)); // [1, 2, 3, 4, 5]
+
 
 //! Завдання 2  ----
 // Дано масив об'єктів. Створіть новий масив, що містить всі значення
@@ -19,8 +28,13 @@
 //  { id: 3, values: [7, 8, 9] },
 // ];
 
+//    1
 // const dataValues = data.flatMap(item => item.values);
 // console.log(dataValues);
+//    2
+// const getDataValues = (arr) => arr.flatMap(el => el.values);
+// console.log(getDataValues(data));
+
 
 //! Завдання 3   ----
 // Дано масив об'єктів.
@@ -33,10 +47,14 @@
 //  { name: 'Bob', age: 19 },
 // ];
 
-// const filterByAge = (arr, minAge) => {
-//   return arr.some((item) => item.age < minAge)
-// };
-// console.log(filterByAge(people, 20));
+//    1
+// const filterByAge = people.some(item => item.age < 20);
+// console.log(filterByAge);
+//    2
+// const getFilterByAge = (arr, minAge) => arr.some((item) => item.age < minAge);
+// console.log(getFilterByAge(people, 20));
+
+
 
 //! Завдання 4   ----
 // Дано масив чисел [2, 4, 6, 8, 10].
@@ -44,16 +62,35 @@
 
 // const numbers = [2, 4, 6, 8, 10];
 
+//    1
 // const pairNum = numbers.every(num => num % 2 === 0);
 // console.log(pairNum);
+//    2
+// const getPairNum = (arr) => arr.every(el => el % 2 === 0);
+// console.log(getPairNum(numbers));
+
+
 
 //! Завдання 5   ----
 // Знайдіть перше непарне число
 
 // const numbers = [2, 1, 6, 8, 9, 10, 12];
 
-// const noPair = numbers.find(item => item % 2 !== 0);
+//    1
+// const noPair = numbers.find(number => number % 2 !== 0);
 // console.log(noPair); // 1
+//    2
+// const getNoPair = (arr) => {
+//     const check = arr.find(item => item % 2 !== 0); 
+//    if(check === undefined) {
+//      return "Ooops!"
+//    }
+//     return check;
+// };
+// console.log(getNoPair([2, 4, 6])); // "Ooops!"
+// console.log(getNoPair(numbers)); // 1
+
+
 
 //! Завдання 6  ----
 // Відсортуйте масив чисел [4, 2, 5, 1, 3]
@@ -61,8 +98,16 @@
 
 // const numbersArray = [4, 2, 5, 1, 3];
 
-// const res = numbersArray.toSorted();
+//    1
+// const res = numbersArray.toSorted((a, b) => a - b);
 // console.log(res); // [1, 2, 3, 4, 5]
+//    2
+// const getRes = (arr) => arr.toSorted((a, b) => a - b);
+// console.log(getRes(numbersArray)); // [1, 2, 3, 4, 5]
+// console.log(getRes([10, 9, 22, 46, 1])); // [1, 9, 10, 22, 46]
+
+
+
 
 //! Завдання 7  ----
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]
@@ -71,8 +116,16 @@
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
-// const res = stringArray.toSorted((a, b) => a.localeCompare(b));
-// console.log(res); // ['apple', 'banana', 'orange', 'pear']
+//    1
+// const result = stringArray.toSorted((a, b) => a.localeCompare(b));
+// console.log(result); // ['apple', 'banana', 'orange', 'pear']
+//    2
+// const getResult = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
+// console.log(getResult(stringArray)); // ['apple', 'banana', 'orange', 'pear']
+// console.log(getResult(["lalala", "tototo", "blablabla"])); // ['blablabla', 'lalala', 'tototo']
+
+
+
 
 //! Завдання 8  ----
 //  Відсортуйте масив об'єктів за віком у порядку зростання.
@@ -84,8 +137,19 @@
 //  { name: 'Bob', age: 19 },
 // ];
 
+//    1
 // const sorted = users.toSorted((a, b) => a.age - b.age);
 // console.log(sorted);
+//    2
+// const getSorted = (arr) => arr.toSorted((a, b) => a.age - b.age);
+// console.log(getSorted(users));
+// console.log(getSorted([
+//     {name: 'Vasya', age: 10},
+//     {name: 'Katya', age: 90},
+//     {name: 'Jenya', age: 42}
+// ]));
+
+
 
 //! Завдання 9  ----
 // Дано масив об'єктів.
@@ -99,11 +163,24 @@
 //  { name: 'Bob', age: 19 },
 // ]
 
-// const userFiltered = (arr, minAge) => {
+
+//    1
+// const userFiltered = user.filter(item => item.age > 20);
+// console.log(userFiltered);
+
+//    2
+// const getUserFiltered = (arr, minAge) => {
 //   return arr.filter((item) => item.age > minAge);
 // };
 
-// console.log(userFiltered(user, 20));
+// console.log(getUserFiltered(user, 20));
+// console.log(getUserFiltered([
+//     {name: 'Vasya', age: 10},
+//     {name: 'Katya', age: 90},
+//     {name: 'Jenya', age: 42}
+// ], 20));
+
+
 
 //! Завдання 10  ----
 // Дано масив чисел [1, 2, 3, 4, 5].
@@ -111,9 +188,17 @@
 
 // const numbers = [1, 2, 3, 4, 5];
 
-// const sum = numbers.reduce((acc, num) => acc + num, 0);
+//    1
+// const sumArr = numbers.reduce((sum, num) => sum + num, 0);
+// console.log(sumArr);
 
-// console.log(sum);
+//    2
+// const getSum = (arr) => arr.reduce((sum, item) => sum + item, 0);
+// console.log(getSum(numbers)); // 15
+// console.log(getSum([2, 2, 2, 2, 2])); // 10
+
+
+
 
 //! Завдання 11  ----
 // Розроби клас Calculator, який дозволяє виконувати арифметичні
@@ -160,7 +245,7 @@
 //         this.result += value;
 //         return this;
 //     }
-//     subtract(value) {
+//     substract(value) {
 //         this.result -= value;
 //         return this;
 //     }
@@ -170,7 +255,7 @@
 //     }
 //     divide(value) {
 //         if(value === 0) {
-//             return alert("Не можна ділити на 0!")
+//             alert("Не можна ділити на 0!")
 //         }
 //         this.result /= value;
 //         return this; 
@@ -183,7 +268,7 @@
 // const result = calc
 //   .number(10)   // Встановлюємо початкове значення 10
 //   .add(5)       // Додаємо 5 (10 + 5 = 15)
-//   .subtract(3)  // Віднімаємо 3 (15 - 3 = 12)
+//   .substract(3)  // Віднімаємо 3 (15 - 3 = 12)
 //   .multiply(4)  // Множимо на 4 (12 * 4 = 48)
 //   .divide(2)    // Ділимо на 2 (48 / 2 = 24)
 //   .getResult(); // Отримуємо результат: 24
