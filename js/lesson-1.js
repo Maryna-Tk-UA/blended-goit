@@ -21,11 +21,11 @@
 //   alert('Невірно');
 // }
 
-const number = +prompt('Enter number');
-alert(number === 10 ? 'Вірно' : 'Невірно');
+// const number = +prompt('Enter number');
+// alert(number === 10 ? 'Вірно' : 'Невірно');
 
-const value = confirm('Are you here?');
-console.log(value);
+// const value = confirm('Are you here?');
+// console.log(value);
 
 //! Завдання 2   done
 // У змінній min лежить випадкове число від 0 до 59.
@@ -34,17 +34,17 @@ console.log(value);
 // Виведіть в alert відповідне повідомлення, наприклад:
 // "10 входить в першу чверть"
 
-const min = Math.floor(Math.random() * (59 - 0) + 0);
-if (min < 15) {
-  alert(`${min} входить в першу чверть`);
-} else if (min < 30) {
-  alert(`${min} входить в другу чверть`);
-} else if (min < 45) {
-  alert(`${min} входить в третю чверть`);
-} else {
-  alert(`${min} входить в четверту чверть`);
-}
-console.log(min);
+// const min = Math.floor(Math.random() * (59 - 0) + 0);
+// if (min < 15) {
+//   alert(`${min} входить в першу чверть`);
+// } else if (min < 30) {
+//   alert(`${min} входить в другу чверть`);
+// } else if (min < 45) {
+//   alert(`${min} входить в третю чверть`);
+// } else {
+//   alert(`${min} входить в четверту чверть`);
+// }
+// console.log(min);
 
 //! Завдання 3   done
 // Змінна num може набувати 4 значення: '1', '2', '3' або '4'
@@ -57,26 +57,26 @@ console.log(min);
 // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // Значення змінної result виведіть в консоль.
 
-const num = prompt('Введіть значення від 1 до 4 включно');
-let result = '';
-switch (num) {
-  case '1':
-    result = 'зима';
-    break;
-  case '2':
-    result = 'весна';
-    break;
-  case '3':
-    result = 'літо';
-    break;
-  case '4':
-    result = 'осінь';
-    break;
-  default:
-    result = 'Вибачте, але ви маєте ввести значення від 1 до 4 включно';
-}
-alert(result);
-console.log(result);
+// const num = prompt('Введіть значення від 1 до 4 включно');
+// let result = '';
+// switch (num) {
+//   case '1':
+//     result = 'зима';
+//     break;
+//   case '2':
+//     result = 'весна';
+//     break;
+//   case '3':
+//     result = 'літо';
+//     break;
+//   case '4':
+//     result = 'осінь';
+//     break;
+//   default:
+//     result = 'Вибачте, але ви маєте ввести значення від 1 до 4 включно';
+// }
+// alert(result);
+// console.log(result);
 
 //! Завдання 4   done
 // Отримуйте від користувача число (кількість хвилин) через prompt
@@ -85,13 +85,13 @@ console.log(result);
 // Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
 
-const clientMinutes = +prompt('Enter minutes');
-const hours = Math.floor(clientMinutes / 60);
-const minutes = clientMinutes % 60;
-const doubleHours = String(hours).padStart(2, 0);
-const doubleMinutes = String(minutes).padStart(2, 0);
-console.log(`${doubleHours}:${doubleMinutes}`);
-// alert(`${doubleHours}:${doubleMinutes}`);
+// const clientMinutes = +prompt('Enter minutes');
+// const hours = Math.floor(clientMinutes / 60);
+// const minutes = clientMinutes % 60;
+// const doubleHours = String(hours).padStart(2, 0);
+// const doubleMinutes = String(minutes).padStart(2, 0);
+// console.log(`${doubleHours}:${doubleMinutes}`);
+// // alert(`${doubleHours}:${doubleMinutes}`);
 
 //! Завдання 5   done
 // Напишіть код, який запитуватиме у користувача
@@ -109,31 +109,31 @@ console.log(`${doubleHours}:${doubleMinutes}`);
 // то вивести в alert рядок "Добрий день!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
 
-const login = prompt('Введіть ваш логін');
-console.log(login);
-if (login === 'Адмін') {
-  const password = prompt('Введіть пароль');
-  if (password === 'Я головний') {
-    alert('Добрий день!');
-  } else if (password === null || password === '') {
-    alert('Скасовано');
-  } else {
-    alert('Невірний пароль!');
-  }
-} else if (login === null || login === '') {
-  alert('Скасовано');
-} else {
-  alert('Я вас не знаю!');
-}
+// const login = prompt('Введіть ваш логін');
+// console.log(login);
+// if (login === 'Адмін') {
+//   const password = prompt('Введіть пароль');
+//   if (password === 'Я головний') {
+//     alert('Добрий день!');
+//   } else if (password === null || password === '') {
+//     alert('Скасовано');
+//   } else {
+//     alert('Невірний пароль!');
+//   }
+// } else if (login === null || login === '') {
+//   alert('Скасовано');
+// } else {
+//   alert('Я вас не знаю!');
+// }
 
 //! Завдання 6   done
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
-let count = 0;
-const b = 20;
-while (count <= b) {
-  console.log(`Count: ${count}`);
-  count += 1;
-}
+// let count = 0;
+// const b = 20;
+// while (count <= b) {
+//   console.log(`Count: ${count}`);
+//   count += 1;
+// }
 
 //! Завдання 7   done
 // Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
@@ -143,17 +143,17 @@ while (count <= b) {
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-function getNumbers(min, max) {
-  let total = 0;
-  for (let i = max; i >= min; i--) {
-    console.log(i);
-    if (i % 2 === 0) {
-      total += i;
-    }
-  }
-  return total;
-}
-console.log(getNumbers(3, 10));
+// function getNumbers(min, max) {
+//   let total = 0;
+//   for (let i = max; i >= min; i--) {
+//     console.log(i);
+//     if (i % 2 === 0) {
+//       total += i;
+//     }
+//   }
+//   return total;
+// }
+// console.log(getNumbers(3, 10));
 
 //! Завдання 8   done
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
@@ -180,16 +180,16 @@ console.log(getNumbers(3, 10));
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
-function isAdult(age) {
-  if (age >= 18) {
-    return true;
-  }
-  return confirm('Are you adult?');
-  //   return answer;
-  //   return age >= 18 || confirm('Are you adult?');
-}
-console.log(isAdult(20));
-// console.log(isAdult(10));
+// function isAdult(age) {
+//   if (age >= 18) {
+//     return true;
+//   }
+//   return confirm('Are you adult?');
+//   //   return answer;
+//   //   return age >= 18 || confirm('Are you adult?');
+// }
+// console.log(isAdult(20));
+// // console.log(isAdult(10));
 
 //! Завдання 10   done
 // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
@@ -197,20 +197,20 @@ console.log(isAdult(20));
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
 // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
 
-function fizzBuzz(num) {
+// function fizzBuzz(num) {
 //   if (typeof num !== 'number') {
 //     console.log('no number');
 //     return;
 //   }
-  for (let i = 1; i <= num; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log(i, 'fizzbuzz');
-    } else if (i % 3 === 0) {
-      console.log(i, 'fizz');
-    } else if (i % 5 === 0) {
-      console.log(i, 'buzz');
-    }
-  }
-}
-fizzBuzz();
-console.log(fizzBuzz(15));
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log(i, 'fizzbuzz');
+//     } else if (i % 3 === 0) {
+//       console.log(i, 'fizz');
+//     } else if (i % 5 === 0) {
+//       console.log(i, 'buzz');
+//     }
+//   }
+// }
+// fizzBuzz();
+// console.log(fizzBuzz(15));
